@@ -4,9 +4,53 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.plebarcky.sale.PagamentoCartaoActivity">
+    tools:context="com.plebarcky.sale.PagamentoCartaoActivity"
+    android:gravity="center_horizontal">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <TextView android:text="@string/lblTipoCartao" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblTipoCartao"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblCartaoDebito"
+        android:id="@+id/btnCartaoDebito"
+        android:layout_below="@+id/lblTipoCartao"
+        android:layout_marginTop="73dp"
+        android:textColor="#ffffff"
+        android:background="#1720ff"
+        android:textSize="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/btnCartaoCredito" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblCartaoCredito"
+        android:id="@+id/btnCartaoCredito"
+        android:background="#1720ff"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:layout_marginTop="49dp"
+        android:layout_below="@+id/btnCartaoDebito"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PARCELADO"
+        android:id="@+id/btnCartaoParcelado"
+        android:background="#1720ff"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:layout_marginTop="55dp"
+        android:layout_below="@+id/btnCartaoCredito"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

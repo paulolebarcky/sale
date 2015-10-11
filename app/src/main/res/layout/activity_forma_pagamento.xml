@@ -4,9 +4,38 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.plebarcky.sale.FormaPagamentoActivity">
+    tools:context="com.plebarcky.sale.FormaPagamentoActivity"
+    android:gravity="center_horizontal">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <TextView android:text="@string/lblFormaPagamento" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblFormaPagamento"
+        android:textSize="20sp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DINHEIRO"
+        android:id="@+id/btnFormaDinheiro"
+        android:textColor="#ffffff"
+        android:background="#425eff"
+        android:textSize="20sp"
+        android:layout_below="@+id/btnFormaCartao"
+        android:layout_alignStart="@+id/btnFormaCartao"
+        android:layout_marginTop="100dp"
+        android:layout_alignEnd="@+id/btnFormaCartao" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblFormaCartao"
+        android:id="@+id/btnFormaCartao"
+        android:background="#FF425EFF"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:layout_marginTop="142dp"
+        android:layout_below="@+id/lblFormaPagamento"
+        android:layout_alignStart="@+id/lblFormaPagamento"
+        android:layout_alignEnd="@+id/lblFormaPagamento" />
 
 </RelativeLayout>

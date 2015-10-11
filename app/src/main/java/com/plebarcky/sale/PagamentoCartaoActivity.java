@@ -4,13 +4,56 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 public class PagamentoCartaoActivity extends ActionBarActivity {
+
+    private Button btnCartaoDebito;
+    private Button btnCartaoCredito;
+    private Button btnCartaoParcelado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pagamento_cartao);
+
+        btnCartaoCredito = (Button) findViewById(R.id.btnCartaoCredito);
+        btnCartaoCredito.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showPagamentoCartaoCreditoRealizado();
+            }
+        });
+
+        btnCartaoDebito = (Button) findViewById(R.id.btnCartaoDebito);
+        btnCartaoDebito.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showPagamentoCartaoDebitoRealizado();
+            }
+        });
+
+        btnCartaoParcelado = (Button) findViewById(R.id.btnCartaoParcelado);
+        btnCartaoParcelado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showPagamentoCartaoParceladoRealizado();
+            }
+        });
+    }
+
+    private void showPagamentoCartaoDebitoRealizado() {
+        Toast.makeText(getBaseContext(), "Pagamento débito registrado!", Toast.LENGTH_LONG).show();
+    }
+
+    private void showPagamentoCartaoCreditoRealizado() {
+        Toast.makeText(getBaseContext(), "Pagamento crédito registrado!", Toast.LENGTH_LONG).show();
+    }
+
+    private void showPagamentoCartaoParceladoRealizado() {
+        Toast.makeText(getBaseContext(), "Pagamento Parcelado registrado!", Toast.LENGTH_LONG).show();
     }
 
     @Override

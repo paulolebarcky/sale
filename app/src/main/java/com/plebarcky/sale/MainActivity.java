@@ -1,6 +1,7 @@
 package com.plebarcky.sale;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -21,8 +22,6 @@ public class MainActivity extends ActionBarActivity
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
     private NavigationDrawerFragment mNavigationDrawerFragment;
-
-    private GpsBasicsAndroidExample mGpsBasicsAndroidExample;
 
     /**
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
@@ -57,6 +56,10 @@ public class MainActivity extends ActionBarActivity
         switch (number) {
             case 1:
                 mTitle = getString(R.string.title_section1);
+
+                Intent it = new Intent(this, ValorActivity.class);
+                startActivity(it);
+
                 break;
             case 2:
                 mTitle = getString(R.string.title_section2);
@@ -96,9 +99,11 @@ public class MainActivity extends ActionBarActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        /*if (id == R.id.action_settings) {
+            Intent it = new Intent(this, ValorActivity.class);
+            startActivity(it);
             return true;
-        }
+        }*/
 
         return super.onOptionsItemSelected(item);
     }

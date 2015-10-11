@@ -1,16 +1,50 @@
 package com.plebarcky.sale;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 public class FormaPagamentoActivity extends ActionBarActivity {
+
+    private Button btnFormaDinheiro;
+    private Button btnFormaCartao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forma_pagamento);
+
+        btnFormaDinheiro = (Button) findViewById(R.id.btnFormaDinheiro);
+        btnFormaDinheiro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showMsgPagamentoDinheiro();
+            }
+        });
+
+        btnFormaCartao = (Button) findViewById(R.id.btnFormaCartao);
+        btnFormaCartao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showPagamentoCartao();
+            }
+        });
+
+
+    }
+
+    private void showPagamentoCartao()  {
+        Intent intent = new Intent(this, PagamentoCartaoActivity.class);
+        startActivity(intent);
+    }
+
+    private void showMsgPagamentoDinheiro() {
+        Toast.makeText(getBaseContext(), "Pagamento com Dinheiro foi realizado!", Toast.LENGTH_LONG).show();
     }
 
     @Override

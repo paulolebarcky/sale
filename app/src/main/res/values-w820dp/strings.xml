@@ -1,2 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="lblValorVenda">Valor da Venda</string>
+    <string name="lblBtnAvancar">AVANÇAR</string>
+    <string name="lblFormaPagamento">Selecione a forma de pagamento</string>
+    <string name="lblTipoCartao">Tipo Pagamento</string>
+    <string name="lblFormaCartao">CARTÃO</string>
+</resources>

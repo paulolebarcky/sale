@@ -49,9 +49,9 @@ public class GpsBasicsAndroidExample extends Activity implements LocationListene
     @Override
     public void onLocationChanged(Location location) {
 
-        String str = "Latitude: "+location.getLatitude()+ "Longitude: "  + location.getLongitude();
+        //String str = "Latitude: "+location.getLatitude()+ "Longitude: "  + location.getLongitude();
 
-        Toast.makeText(getBaseContext(), str, Toast.LENGTH_LONG).show();
+        //Toast.makeText(getBaseContext(), str, Toast.LENGTH_LONG).show();
     }
 
     @Override

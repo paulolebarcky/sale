@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Sale</string>
 
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
+    <string name="title_section1">Registrar Venda</string>
+    <string name="title_section2">Extrato Vendas</string>
+    <string name="title_section3">Sair</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -11,4 +11,17 @@
     <string name="action_example">Example action</string>
 
     <string name="action_settings">Settings</string>
+    <string name="title_activity_valor">ValorActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="lblValorVenda">Valor da Venda</string>
+    <string name="lblBtnAvancar">AVANÇAR</string>
+    <string name="title_activity_forma_pagamento">FormaPagamentoActivity</string>
+    <string name="lblFormaPagamento">Selecione a forma de pagamento</string>
+    <string name="title_activity_pagamento_cartao">PagamentoCartaoActivity</string>
+    <string name="lblTipoCartao">Tipo Pagamento</string>
+    <string name="lblCartaoDebito">DÉBITO</string>
+    <string name="lblCartaoCredito">CRÉDITO</string>
+    <string name="lblCartaoParcelado">PARCELADO</string>
+    <string name="lblFormaCartao">CARTÃO</string>
 </resources>

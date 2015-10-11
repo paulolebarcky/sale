@@ -1,16 +1,34 @@
 package com.plebarcky.sale;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class ValorActivity extends ActionBarActivity {
+
+    private Button btnAvancar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_valor);
+
+        btnAvancar = (Button) findViewById(R.id.btnAvancar);
+        btnAvancar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showFormaPagamento();
+            }
+        });
+    }
+
+    private void showFormaPagamento() {
+        Intent it = new Intent(this, FormaPagamentoActivity.class);
+        startActivity(it);
     }
 
     @Override
